@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScreenShot Snipet</title>
+    <style>
+   
+        @import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+ 
+ 
+ 
+main{
+     width: 80%;
+    height: 80vh;
+    border: 5px solid teal;
+    margin: 5% auto;
+            color: teal;
+            border: 5px solid teal;
+}
+
+main h1{
+  text-align: center;
+}
+
+section{
+    text-align: left;
+    line-height: 20px;
+    width: 60%;
+    height: 40vh;
+    border: 5px solid teal;
+    margin: 5% auto;
+    padding: 9px;
+}
+input{
+    padding: 15px;
+}
+
+.button {
+  border-radius: 4px;
+  background-color: white;
+  border: none;
+  color: teal;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px;
+  width: 90px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button:hover{
+    border: 1px solid teal;
+}
+
+a{
+    color: teal;
+    font-weight: 900;
+}
+    </style>
+
+    <link rel="stylesheet" href="./home.css">
+    
+</head>
+<body>
+<main>
+  <h1>ScreenShot Snippet</h1>
+
+    <section>
+    <h1>ScreenShot Snipet is a unique way to orgnaize your most important Screenshot</h1>
+    <h1>We keep your ScreenShot at your ease...</h1>
+    <%= typeof msg != 'undefined' ? msg  : '' %>
+    <form action="/fileUpload" enctype="multipart/form-data" method="post">
+
+    <div class="upload">
+        <label for="file">Upload your ScreenShot</label>
+        <input type="file" name="uploaded_file" id="file"> <br>
+
+        <label for="file">Screen Shot content in brief</label>
+        <input type="text" name="fileInfo" id="file"> <br> <br>
+        <button class="button"><span>Upload</span></button>
+    </div>
+    </form>
+    </section>
+</main>
+</body>
+</html>
